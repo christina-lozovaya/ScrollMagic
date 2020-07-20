@@ -9,8 +9,8 @@ $(document).ready(function(){
 
 
 //my diagonal slider
-    $('.diagonal-box').on('click', diagonalItemActive);
-    $('.diagonal__wrapper').on('click', diagonalItemDeactivate);
+    $('.diagonals-2 .diagonal-box').on('click', diagonalItemActive);
+    $('.diagonals-2 .diagonal__wrapper').on('click', diagonalItemDeactivate);
 
     function diagonalItemActive(e) {
         e.stopPropagation();

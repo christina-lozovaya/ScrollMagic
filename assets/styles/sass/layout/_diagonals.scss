@@ -189,7 +189,7 @@
 	height: 30%;
 
 	.diagonal-bg-text {
-	  transform: skewy(-45deg) rotate(-5deg);
+	  transform: rotate(-45deg);
 	  position: absolute;
 	  left: 0;
 	  top: -55px;
@@ -318,5 +318,60 @@
 	//bleeding into the adjecting areas:
 	//------------ */
 	//// border: 2px dashed #fff8;
+  //}
+}
+
+.diagonals-1 {
+  background-color: #d1d1d1;
+
+  .diagonal-box {
+	background-image: linear-gradient(45deg,#d1d1d1,#d1d1d1);
+	border-bottom: 1px solid grey;
+
+	&:hover {
+	  background-image: none;
+	}
+  }
+
+  .ratio-16-9:before {
+	position: absolute;
+  }
+
+  .diagonal-box:first-of-type {
+	border-top: 1px solid grey;
+  }
+
+  .container {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+
+  .title {
+	display: flex;
+	flex-direction: column;
+	font-size: 100px;
+	font-family: 'Intro', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 200px, black 200px, black 400px);
+	background-size:200% 100%;
+	/*   animation: loading-slide 20s linear infinite; */
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 2px;
+	/*   -webkit-text-stroke-color: black; */
+	-webkit-background-clip: text;
+	background-clip: text;
+	margin-left: 15%;
+  }
+
+
+  //.mask {
+	////background-image: repeating-linear-gradient(-45deg, transparent, transparent 200px, black 200px, black 400px);
+	//background-image: linear-gradient(45deg, red, red);
+	//color: #f1f1f1;
+  //
   //}
 }
