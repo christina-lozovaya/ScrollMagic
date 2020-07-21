@@ -20,7 +20,7 @@
   --clip-padding: calc(var(--full-width) * var(--magic-number));
 
   .diagonal__wrapper {
-	margin-top: -30%;
+	margin-top: -24%;
 
 	&.active {
 	  .diagonal-box {
@@ -248,46 +248,49 @@
   }
 
   .container {
-	position: absolute;
-	max-width: 600px;
-	left: 20%;
-	top: 15%;
+	position: relative;
+	left: 20vw;
+	top: 20vh;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
   }
 
   .title {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	font-size: 80px;
+	font-size: 4rem;
 	line-height: 1.1;
 	font-family: 'Intro', sans-serif;
 	font-weight: 700;
 	text-transform: capitalize;
 	background-size:200% 100%;
-	animation: textAnimate 5s  linear;
+	animation: textAnimate 4s linear;
 	animation-iteration-count: 1;
-	animation-direction: alternate-reverse;
-
+	animation-direction: alternate;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke-width: 2px;
-	/*   -webkit-text-stroke-color: black; */
+	-webkit-text-stroke-color: black;
 	-webkit-background-clip: text;
 	background-clip: text;
-
 	letter-spacing: 2px;
 
-
-
 	.title--lg {
-	  font-size: 120px;
+	  font-size: 8rem;
 	}
+  }
+
+  .description {
+	padding-right: 50vw;
   }
 }
 
 @keyframes textAnimate {
   from {
-	background-position: left;
+	background-position: right;
   }
   to {
-	background-position: right;
+	background-position: left;
   }
 }

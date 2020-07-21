@@ -49,6 +49,13 @@ $(document).ready(function() {
         .addTo(controller);
     *  */
 
+    var animateTitle = new ScrollMagic.Scene({
+        triggerElement: '.diagonals-1',
+        triggerHook: 0, //top of the page
+    })
+        .setClassToggle('.diagonals-1', 'fade-in')
+        .addTo(controller);
+
     //pin the intro
     var pinIntroScene = new ScrollMagic.Scene({
         triggerElement: '.intro',

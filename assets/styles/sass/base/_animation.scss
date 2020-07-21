@@ -8,3 +8,20 @@
 	transform: translateY(0);
   }
 }
+
+.diagonals-1 {
+  .title,
+  .description {
+	opacity: 0;
+	transform: translateX(-50px);
+	transition: all 1.5s ease-in-out;
+  }
+
+  &.fade-in {
+	.title,
+	.description {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+}
