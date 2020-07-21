@@ -3,6 +3,7 @@ const browserSync   = require('browser-sync').create();
 const concat        = require('gulp-concat'); //склейка файлов в один
 const uglify        = require('gulp-uglify-es').default; //минификация js-файлов
 const sass          = require('gulp-sass');
+const sourcemaps    = require('gulp-sourcemaps');
 const autoprefixer  = require('gulp-autoprefixer');
 const cleanCSS      = require('gulp-clean-css'); //минификация, сжатие, удаление комментариев из css
 const imageMin      = require('gulp-imagemin'); //сжатие картинок
@@ -35,6 +36,7 @@ function scriptsFunc() {
 
 function stylesFunc() {
     return src('assets/styles/sass/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass()) //минификация файла стилей
         .pipe(concat('styles.min.css')) //объединение всех файлов стилей в один под названием styles.min.css -> имя может быть любое
         .pipe(autoprefixer({
@@ -46,6 +48,7 @@ function stylesFunc() {
                 specialComments: 0 //убираем комментарии из файла стилей
             }}
         }))
+        .pipe(sourcemaps.write('maps/'))
         .pipe(dest('assets/styles/css/'))
         .pipe(browserSync.stream())
 }

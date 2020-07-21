@@ -11,6 +11,8 @@ $(document).ready(function(){
 //my diagonal slider
     $('.diagonals-2 .diagonal-box').on('click', diagonalItemActive);
     $('.diagonals-2 .diagonal__wrapper').on('click', diagonalItemDeactivate);
+    $firstDiagonalHeight = $(".diagonal-box.bg-1").height();
+    console.log($firstDiagonalHeight);
 
     function diagonalItemActive(e) {
         e.stopPropagation();
@@ -24,9 +26,7 @@ $(document).ready(function(){
         }
     }
 
-//diagonal slider by nnvenio
-    $(document).ready(function(){
-        $('.gallery_content').createDiagonalSlider();
-    });
-
+    $('.diagonals-1 .title').css({
+        "background-image": "linear-gradient(135deg,transparent " + $firstDiagonalHeight + "px,#000 " + $firstDiagonalHeight + "px,#000 100%)"
+    })
 });
