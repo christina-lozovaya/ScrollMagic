@@ -94,7 +94,6 @@ exports.cleanImgTask        = cleanImgFunc;
 exports.default             = parallel(stylesFunc, scriptsFunc, browserSyncFunc, startWatchFunc);
 exports.build               = series(cleanBuildFunc, stylesFunc, scriptsFunc, imagesFunc, buildCopyFunc);
 
-console.log("Hi!")
 
 
 
